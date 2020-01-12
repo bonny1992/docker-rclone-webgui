@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv /bin/sh 
+
+
+echo "Starting rclone web gui"
+rclone rcd \
+ --rc-web-gui \
+ --rc-user=$RCLONE_USER \
+ --rc-pass=$RCLONE_PASS \
+ --rc-addr=$RCLONE_ADDRESS:$RCLONE_PORT \
+ --rc-serve
